@@ -1,0 +1,35 @@
+name: ServerMode
+options:
+  bundleIdPrefix: com.local
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "16.3"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+
+targets:
+  ServerMode:
+    type: application
+    platform: macOS
+    sources:
+      - ServerMode
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.local.ServerMode
+        INFOPLIST_FILE: ServerMode/Info.plist
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        PRODUCT_NAME: ServerMode
+        COMBINE_HIDPI_IMAGES: true
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_STRICT_CONCURRENCY: complete
+        LD_RUNPATH_SEARCH_PATHS:
+          - "@executable_path/../Frameworks"
+    info:
+      path: ServerMode/Info.plist
+      properties:
+        LSUIElement: true
+        NSUserNotificationAlertStyle: alert
