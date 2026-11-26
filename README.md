@@ -76,3 +76,7 @@ ServerMode/
   HotkeyManager.swift          — Global keyboard shortcut
   SettingsPanel.swift           — Shortcut recorder panel
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE).
